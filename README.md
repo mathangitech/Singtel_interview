@@ -1,3 +1,4 @@
+
 Q1 - Answer1
 1. Implemented sing
 2. Seperatly written a class for testing
@@ -30,3 +31,5 @@ To show the metamorphosis of butterfly stage is used.
 Q4 - Answer
 Since the array is stored as object of parent class references.
 All the methods are accessible ans id used for counting
+
+Note : Took 2.5 to 3  hours
