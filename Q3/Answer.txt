@@ -1,0 +1,53 @@
+/**
+Designed a Butterfly class from Animal.
+To show the metamorphosis of butterfly stage is used.
+**/
+
+class Animal {
+	boolean walk(){
+	return false;
+	}
+	boolean fly() {
+	return false;
+	}
+	boolean sing() {
+	return false;
+	}
+	boolean swim() {
+	return false;
+	}
+}
+
+class Butterfly extends Animal {
+	String stage = "";
+
+	Butterfly(String stage){
+		this.stage = stage;
+	}
+	boolean fly() {
+		if (stage.equals("butterfly"))
+		return true;
+		else 
+		return false;
+	}
+}
+
+
+public class Solution {
+public static void main(String[] args) {
+Animal b = new Butterfly("butterfly");
+
+if(b instanceOf Butterfly && b.fly()) {
+System.out.println("Butterfly can fly");
+System.out.println("A butterfly does not make a sound");
+}
+b = new Butterfly("");
+if((b instanceOf Butterfly  && !b.fly()) {
+System.out.println("A caterpillar cannot fly");
+System.out.println("A caterpillar can walk");
+}
+
+
+}
+}
+

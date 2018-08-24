@@ -1,0 +1,49 @@
+/**
+Since the array is stored as object of parent class references.
+All the methods are accessible ans id used for counting
+**/
+
+public class Solution {
+public static void main(String[] args) {
+Animal[] animals = new Animal[]{
+new Bird(),
+new Duck(),
+new Chicken(),
+new Rooster(),
+new Parrot(),
+new Fish(),
+new Shark(),
+new Clownfish(),
+new Dolhpin(),
+new Frog(),
+new Dog(),
+new Butterfly(),
+new Cat()
+};
+int countFly = 0;
+int countWalk = 0;
+int countSwim = 0;
+int countSing = 0;
+for (int i =0; i <=animals.length;i++){
+ if (animals[i].swim())
+	countSwim++;
+ if (animals[i].walk())
+	countWalk++;
+ if (animals[i].Sing())
+	countSing++;
+ if (animals[i].fly())
+	countFly++;
+}
+
+System.out.println("No of Animals can fly "+countFly);
+
+System.out.println("No of Animals can walk "+countWalk);
+
+System.out.println("No of Animals can swim "+countSwim);
+
+System.out.println("No of Animals can sing "+countSing);
+
+
+}
+}
+

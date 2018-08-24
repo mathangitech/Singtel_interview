@@ -1,0 +1,70 @@
+/**
+Ans1. Implemented Fish such that fish do not swim, walk, sing
+Ans2. Shark, Clown class is inherited from fish to display about apperance, characteristic
+Ans3. Dolphin is designed to inherit from Animal instead of fish
+
+**/
+
+
+class Animal {
+	boolean walk(){
+	return false;
+	}
+}
+
+class Fish extends Animal {
+	boolean sing() {
+	return false;
+	}
+	boolean swim() {
+	return true;
+	}
+}
+class Shark extends Fish {
+	String appereance(){
+	return "Sharks are large and grey";
+	}
+	String characteristic(){
+	return "Sharks eat other fish";
+	}
+}
+class Clown extends Fish {
+	
+	String appereance(){
+	return "Clownfish are small and colourful";
+	}
+	String characteristic(){
+	return "Clownfish make jokes";
+	}
+}
+class Dolphin extends Animal {
+	boolean swim() {
+	return true;
+	}
+}
+
+
+public class Solution {
+public static void main(String[] args) {
+Fish f = new Fish();
+if(!f.sing())
+System.out.println("Fish dont Sing");
+if(!f.walk())
+System.out.println("Fish dont walk");
+if(f.swim())
+System.out.println("Fish can swim");
+
+Fish fs = new Shark();
+Fish fc = new Clown();
+Animal animal = new Dolphin();
+System.out.println(fs.appereance());
+System.out.println(fc.appereance());
+System.out.println(fs.characteristic());
+System.out.println(fc.characteristic());
+
+if(animal instanceOf Animal && animal.swim())
+	System.out.println("Dolphin");
+
+}
+}
+

@@ -1,0 +1,89 @@
+/**
+Implemented parrot to say meow, woof etc... based on the type it lives with.
+Type is intialized via constructor
+**/
+
+class Animal {
+	boolean walk(){
+	return true;
+	}
+}
+
+class Bird extends Animal {
+	boolean fly() {
+	return true;
+	}
+	boolean sing() {
+	return true;
+	}
+	boolean swim() {
+	return false;
+	}
+}
+
+class Duck extends Bird {
+	boolean fly() {
+	return false;
+	}
+	boolean sing() {
+	return false;
+	}
+	boolean swim() {
+	return true;
+	}
+	String say(){
+	return "Quack,Quack";
+	}
+}
+
+class Chicken extends Bird {
+	String type="";
+
+	Chicken(String type) {
+	this.type=type;
+	}
+	boolean fly() {
+	return false;
+	}
+	boolean sing() {
+	return false;
+	}
+	String say(){
+	if(type.equals("Rooster"))
+		return "Cock-a-doodle-doo";
+	else 
+		return "Cluck,Cluck";
+	}
+}
+
+class Parrot extends Bird {
+	String type="";
+	
+	Parrot(String type) {
+	this.type=type;
+	}
+	String say(){
+	if(type.equals("Dog"))
+		return "woof,woof";
+	else if(type.equals("cat"))
+		return "meow,meow";
+	else if(type.equals("Rooster"))
+		return "Cock-a-doodle-doo";
+	else 
+		return "Ki,Ki";
+	}
+}
+
+public class Solution {
+public static void main(String[] args) {
+Bird bird = new Bird();
+Parrot parrot1 = new Parrot("Dog");
+System.out.println(parrot1.say());
+Parrot parrot2 = new Parrot("Cat");
+System.out.println(parrot2.say());
+Parrot parrot3 = new Parrot("Rooster");
+System.out.println(parrot3.say());
+
+}
+}
+

@@ -1,0 +1,70 @@
+/**
+1.Implemented chicken, duck to say quack & Cluck
+2.Implemented swim to for duck
+3.Overridden fly for chicken.
+**/ 
+
+class Animal {
+	boolean walk(){
+	return true;
+	}
+}
+
+class Bird extends Animal {
+	boolean fly() {
+	return true;
+	}
+	boolean sing() {
+	return true;
+	}
+}
+
+class Duck extends Bird {
+	boolean fly() {
+	return false;
+	}
+	boolean sing() {
+	return false;
+	}
+	boolean swim() {
+	return true;
+	}
+	String say(){
+	return "Quack,Quack";
+	}
+}
+
+class Chicken extends Bird {
+	boolean fly() {
+	return false;
+	}
+	boolean sing() {
+	return false;
+	}
+	String say(){
+	return "Cluck,Cluck";
+	}
+}
+
+public class Solution {
+public static void main(String[] args) {
+Bird bird = new Bird();
+if (bird.walk())
+	System.out.println("I am walking");
+if(bird.fly())
+	System.out.println("I am flying");
+if (bird.sing())
+	System.out.println("I am Singing");
+
+Chicken chick = new Chicken();
+Duck duck = new Duck();
+
+System.out.println(duck.say());
+if (duck.swim())
+	System.out.println("I can swim");
+System.out.println(chick.say());
+if (!chick.fly())
+	System.out.println("I cannot fly");
+}
+}
+

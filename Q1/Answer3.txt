@@ -1,0 +1,67 @@
+/**
+Rooster is implemented without inheritance, by having a type attribute for chicken
+Based on the type chicken say Cluck, Cluck or Cook-ko-Doole
+**/
+class Animal {
+	boolean walk(){
+	return true;
+	}
+}
+
+class Bird extends Animal {
+	boolean fly() {
+	return true;
+	}
+	boolean sing() {
+	return true;
+	}
+}
+
+class Duck extends Bird {
+	boolean fly() {
+	return false;
+	}
+	boolean sing() {
+	return false;
+	}
+	boolean swim() {
+	return true;
+	}
+	String say(){
+	return "Quack,Quack";
+	}
+}
+
+class Chicken extends Bird {
+	String type=null;
+
+	Chicken() {
+	this.type="";
+	}
+	Chicken(String type) {
+	this.type=type;
+	}
+	boolean fly() {
+	return false;
+	}
+	boolean sing() {
+	return false;
+	}
+	String say(){
+	if(type.equals("Rooster"))
+		return "Cock-a-doodle-doo";
+	else 
+		return "Cluck,Cluck";
+	}
+}
+
+public class Solution {
+public static void main(String[] args) {
+Bird bird = new Bird();
+Chicken chick = new Chicken("Rooster");
+Duck duck = new Duck();
+System.out.println(chick.say());
+
+}
+}
+
